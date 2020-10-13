@@ -41,19 +41,19 @@ var symbols = {
             {
                 id: 'main',
                 type: 'image',
-                rect: ['-40px', '-31px','456px','181px','auto', 'auto'],
+                rect: ['-40px', '-25px','456px','181px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"main.png",'0px','0px']
             },
             {
                 id: 'logo',
                 type: 'image',
-                rect: ['15px', '11px','185px','129px','auto', 'auto'],
+                rect: ['-51px', '0px','345px','180px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"logo.png",'0px','0px']
             },
             {
                 id: '_1',
                 type: 'image',
-                rect: ['227px', '1px','161px','150px','auto', 'auto'],
+                rect: ['242px', '1px','167px','150px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"1.png",'0px','0px'],
                 transform: [[],[],[],['-1']]
             }],
@@ -64,11 +64,11 @@ var symbols = {
     states: {
         "Base State": {
             "${_logo}": [
-                ["style", "top", '11px'],
-                ["style", "height", '129px'],
+                ["style", "top", '0px'],
+                ["style", "height", '180px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '15px'],
-                ["style", "width", '185px']
+                ["style", "left", '-51px'],
+                ["style", "width", '345px']
             ],
             "${_f}": [
                 ["style", "left", '-3px'],
@@ -89,7 +89,7 @@ var symbols = {
                 ["style", "width", '443px']
             ],
             "${_main}": [
-                ["style", "top", '-31px'],
+                ["style", "top", '-25px'],
                 ["style", "height", '181px'],
                 ["style", "opacity", '0'],
                 ["style", "left", '-40px'],
@@ -101,8 +101,8 @@ var symbols = {
                 ["style", "height", '150px'],
                 ["transform", "scaleX", '-1'],
                 ["style", "opacity", '0'],
-                ["style", "left", '227px'],
-                ["style", "width", '161px']
+                ["style", "left", '242px'],
+                ["style", "width", '167px']
             ]
         }
     },
