@@ -35,20 +35,27 @@ var symbols = {
             {
                 id: 't',
                 type: 'image',
-                rect: ['7px', '30px','400px','90px','auto', 'auto'],
+                rect: ['7px', '30px','443px','90px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"t.png",'0px','0px']
             },
             {
                 id: 'main',
                 type: 'image',
-                rect: ['-1px', '-2px','420px','154px','auto', 'auto'],
+                rect: ['-40px', '-28px','456px','181px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"main.png",'0px','0px']
             },
             {
                 id: 'logo',
                 type: 'image',
-                rect: ['11px', '4px','382px','154px','auto', 'auto'],
+                rect: ['15px', '11px','185px','129px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"logo.png",'0px','0px']
+            },
+            {
+                id: '_1',
+                type: 'image',
+                rect: ['227px', '1px','161px','150px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"1.png",'0px','0px'],
+                transform: [[],[],[],['-1']]
             }],
             symbolInstances: [
 
@@ -57,11 +64,11 @@ var symbols = {
     states: {
         "Base State": {
             "${_logo}": [
-                ["style", "top", '4px'],
-                ["style", "height", '154px'],
+                ["style", "top", '11px'],
+                ["style", "height", '129px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '11px'],
-                ["style", "width", '382px']
+                ["style", "left", '15px'],
+                ["style", "width", '185px']
             ],
             "${_f}": [
                 ["style", "left", '-3px'],
@@ -69,21 +76,33 @@ var symbols = {
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,1)'],
-                ["style", "overflow", 'hidden'],
+                ["style", "width", '420px'],
                 ["style", "height", '150px'],
-                ["style", "width", '420px']
+                ["style", "overflow", 'hidden']
             ],
             "${_t}": [
                 ["style", "top", '30px'],
+                ["transform", "scaleY", '1'],
+                ["transform", "scaleX", '1'],
                 ["style", "opacity", '0'],
-                ["style", "left", '7px']
+                ["style", "left", '7px'],
+                ["style", "width", '443px']
+            ],
+            "${__1}": [
+                ["style", "top", '1px'],
+                ["transform", "scaleY", '1'],
+                ["transform", "scaleX", '-1'],
+                ["style", "height", '150px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '227px'],
+                ["style", "width", '161px']
             ],
             "${_main}": [
-                ["style", "top", '-2px'],
-                ["style", "height", '154px'],
+                ["style", "top", '-28px'],
+                ["style", "height", '181px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '-1px'],
-                ["style", "width", '420px']
+                ["style", "left", '-40px'],
+                ["style", "width", '456px']
             ]
         }
     },
@@ -91,15 +110,21 @@ var symbols = {
         "Default Timeline": {
             fromState: "Base State",
             toState: "",
-            duration: 18000,
+            duration: 15000,
             autoPlay: true,
             timeline: [
-                { id: "eid7", tween: [ "style", "${_main}", "opacity", '1', { fromValue: '0'}], position: 6000, duration: 1000 },
-                { id: "eid8", tween: [ "style", "${_main}", "opacity", '0', { fromValue: '1'}], position: 11000, duration: 1000 },
-                { id: "eid2", tween: [ "style", "${_t}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 1000 },
-                { id: "eid4", tween: [ "style", "${_t}", "opacity", '0', { fromValue: '1'}], position: 5000, duration: 1000 },
-                { id: "eid9", tween: [ "style", "${_logo}", "opacity", '1', { fromValue: '0'}], position: 12000, duration: 1000 },
-                { id: "eid10", tween: [ "style", "${_logo}", "opacity", '0', { fromValue: '1'}], position: 17000, duration: 1000 }            ]
+                { id: "eid23", tween: [ "style", "${_t}", "left", '-60px', { fromValue: '7px'}], position: 2500, duration: 500 },
+                { id: "eid22", tween: [ "transform", "${_t}", "scaleY", '0.7', { fromValue: '1'}], position: 2500, duration: 500 },
+                { id: "eid2", tween: [ "style", "${_t}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 833 },
+                { id: "eid4", tween: [ "style", "${_t}", "opacity", '0', { fromValue: '1'}], position: 6667, duration: 833 },
+                { id: "eid7", tween: [ "style", "${_main}", "opacity", '1', { fromValue: '0'}], position: 2500, duration: 500 },
+                { id: "eid8", tween: [ "style", "${_main}", "opacity", '0', { fromValue: '1'}], position: 6667, duration: 833 },
+                { id: "eid11", tween: [ "style", "${__1}", "opacity", '1', { fromValue: '0'}], position: 8333, duration: 833 },
+                { id: "eid12", tween: [ "style", "${__1}", "opacity", '0', { fromValue: '1'}], position: 14167, duration: 833 },
+                { id: "eid24", tween: [ "transform", "${_t}", "scaleX", '0.7', { fromValue: '1'}], position: 2500, duration: 500 },
+                { id: "eid21", tween: [ "style", "${_t}", "top", '-11px', { fromValue: '30px'}], position: 2500, duration: 500 },
+                { id: "eid9", tween: [ "style", "${_logo}", "opacity", '1', { fromValue: '0'}], position: 8333, duration: 833 },
+                { id: "eid10", tween: [ "style", "${_logo}", "opacity", '0', { fromValue: '1'}], position: 14167, duration: 833 }            ]
         }
     }
 }
